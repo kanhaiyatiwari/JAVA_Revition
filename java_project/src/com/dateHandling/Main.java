@@ -3,6 +3,7 @@ package com.dateHandling;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
@@ -26,5 +27,11 @@ System.out.println(d.isLeapYear());
 LocalDate date2=LocalDate.now();
 LocalDateTime d2=date2.atTime(2,45,29);
 System.out.println(d2);
+
+//Date time forMat
+DateTimeFormatter format= DateTimeFormatter.ofPattern("dd-yyyy-M  hh-mm-ss");
+LocalDateTime datetime2=LocalDateTime.now();
+String chnage=datetime2.format(format);
+System.out.println("datetime: "+chnage);
 	}
 }
