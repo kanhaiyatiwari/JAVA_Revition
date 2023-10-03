@@ -16,5 +16,15 @@ public class Main {
 		System.out.println(Datetime);
 		LocalDate dob = LocalDate.of(1985, 02, 20);//(yyyy-MM-dd)
 System.out.println(dob);
+
+///is leap year
+
+LocalDate date1=LocalDate.now();
+LocalDate d=date1.minusYears(3);
+System.out.println(d.isLeapYear());
+//at time mathod
+LocalDate date2=LocalDate.now();
+LocalDateTime d2=date2.atTime(2,45,29);
+System.out.println(d2);
 	}
 }
