@@ -11,13 +11,13 @@ import jakarta.persistence.Query;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+//		 TODO Auto-generated method stub
 		inserting("uday",23);
 		inserting("mahes",45);
-		
+//		jpql1();
 //		jpql1();
 //		jpql2();
-		
+//		jpqle1();
 		
 //		
 	}
@@ -101,6 +101,20 @@ public class Main {
 	
 	
 	
+	public static void jpqle1() {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("studentUnit");
+		EntityManager em=emf.createEntityManager();
+		Query q=em.createQuery("select s from Student s");
+
+		List<Student>list=q.getResultList();
+		em.close();
+		for(Student s:list) {
+			System.out.println(s.getAdress());
+		}
+	}
+	
+	
+	
 	public static void jpql2() {
 		EntityManagerFactory emf=Persistence.createEntityManagerFactory("studentUnit");
 		EntityManager em=emf.createEntityManager();
@@ -110,6 +124,9 @@ public class Main {
 			System.out.println(s);
 		}
 	}
+	
+	
+	
 	
 	
 }

@@ -6,15 +6,11 @@ version="2.0">
 <persistence-unit name="studentUnit" >
 <properties>
 <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/scs" />
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sp101" />
 <property name="javax.persistence.jdbc.user" value="root" />
 <property name="javax.persistence.jdbc.password" value="root" />
 
-<!-- <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
-<property name="hibernate.connection.username" value="root"/>
-<property name="hibernate.connection.password" value="root"/>
-<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/ratandb"/>
--->
+
 <property name="hibernate.show_sql" value="true"/>
 <property name="hibernate.hbm2ddl.auto" value="update"/>
 </properties>

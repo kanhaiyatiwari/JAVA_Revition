@@ -5,6 +5,7 @@ import java.util.List;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +21,7 @@ private String name;
 private int age;
 //@Embedded
 //private Adress adress;
-@ElementCollection 
+@ElementCollection (fetch = FetchType.EAGER)
 @Embedded
 @JoinTable(name="studentAdress",joinColumns=@JoinColumn(name="st_id"))
 private List<Adress> adress;
